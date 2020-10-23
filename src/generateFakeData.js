@@ -3,10 +3,17 @@ const faker = require('faker')
 class User {
     constructor() {
         this.id = faker.random.uuid()
-        this.name = faker.name.findName()
+        this.name = "Carles Martínez"
         this.avatar = faker.internet.avatar()
     }
 }
+// class User {
+//     constructor() {
+//         this.id = faker.random.uuid()
+//         this.name = faker.name.findName()
+//         this.avatar = faker.internet.avatar()
+//     }
+// }
 export class Message {
     constructor(isMainUser, msg, date) {
         this.id = faker.random.uuid()
@@ -18,7 +25,8 @@ export class Message {
 
 export const mainUser = new User()
 
-export const contacts = [...Array(15).keys()].map(() => new User())
+export const contacts = [...Array(1).keys()].map(() => new User())
+// export const contacts = [...Array(15).keys()].map(() => new User())
 
 export const contactsMessages = contacts.map((contact) => {
     return {

@@ -1,27 +1,31 @@
 import React, { useState, useEffect } from 'react'
-
-import carles from './assets/carles.jpg'
 import { mainUser, contactsMessages, Message } from './generateFakeData'
 import Avatar from './components/Avatar'
 import ContactBox from './components/ContactBox'
 import MessagesBox from './components/MessagesBox'
 import ChatInputBox from './components/ChatInputBox'
 import './App.css'
-// import Message from './components/Message'
+import Search from './components/Search'
+// import Welcome from './components/Welcome'
 
 function App() {
     const [data, setData] = useState(contactsMessages)
     const [contactSelected, setContactSelected] = useState({})
     const [currentMessages, setCurrentMessages] = useState([])
     const [message, setMessage] = useState('')
+    const [search, setSearch] = useState('')
+    const [filteredContacts, setFilterContacts] = useState([])
 
     useEffect(() => {
         const currContact = data.find(d => d.contact.id === contactSelected.id)
+        // const currContact = data.find(d => d.contact.name === "Carles Martínez")
         setCurrentMessages(currContact && currContact.messages || [])
-    }, [contactSelected, data])
+        filterContacts(data, search)
+    }, [contactSelected, data, search])
 
     function pushMessage(){
         const index=data.findIndex((d) => d.contact.id === contactSelected.id)
+        // const index=data.findIndex((d) => d.contact.id === contactSelected.id)
         const newData = Object.assign([], data, {
             [index]:{
                 contact: contactSelected,
@@ -30,6 +34,18 @@ function App() {
         })
         setData(newData)
         setMessage('')
+    }
+
+    function handleSearch(input){
+        setSearch(input)
+        filterContacts(data, input)
+    }
+
+    function filterContacts(data, search){
+        const result = data.filter(({contact}) => {
+            return !search || contact.name.toLowerCase().includes(search.toLowerCase())
+        })
+        setFilterContacts(result)
     }
 
     return (
@@ -43,13 +59,13 @@ function App() {
                             alt=""
                         />
                     </div> */}
-                    <Avatar user={mainUser} />
+                    <Avatar user={mainUser} showName={true} />
                 </header>
-                <div className="search">
-                    <input type="text" placeholder="Search or start a new chat" />
-                </div>
+                <Search 
+                search={search} 
+                handleSearch={handleSearch}/>
                 <div className="contact-boxes">
-                    {data.map(({ contact, messages }) => (
+                    {filteredContacts.map(({ contact, messages }) => (
                         <ContactBox 
                         contact={contact} 
                         key={contact.id} 
@@ -78,6 +94,15 @@ function App() {
                     </div> */}
                 </div>
             </aside>
+            {/* {contactSelected.id ? (
+                <main>
+                <header>
+                    <Avatar user={contactSelected} showName />
+                </header>
+                <MessagesBox messages={currentMessages} />
+                <ChatInputBox message={message} setMessage={setMessage} pushMessage={pushMessage}/>
+            </main>
+            ): <Welcome/>} */}
             <main>
                 <header>
                     <Avatar user={contactSelected} showName />

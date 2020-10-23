@@ -130,7 +130,7 @@ main header {
 
 .chat-input-box {
     display: flex;
-    height: 3.5rem;
+    height: 4rem;
     align-items: center;
     background: #f0f0f0;
     justify-content: space-between;
