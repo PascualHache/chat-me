@@ -1,29 +1,28 @@
 {
   "files": {
-    "main.css": "/chat-me/static/css/main.f366547b.chunk.css",
-    "main.js": "/chat-me/static/js/main.6c8024f6.chunk.js",
-    "main.js.map": "/chat-me/static/js/main.6c8024f6.chunk.js.map",
+    "main.css": "/chat-me/static/css/main.6e5c8690.chunk.css",
+    "main.js": "/chat-me/static/js/main.b0dd51a2.chunk.js",
+    "main.js.map": "/chat-me/static/js/main.b0dd51a2.chunk.js.map",
     "runtime-main.js": "/chat-me/static/js/runtime-main.b04c9b8e.js",
     "runtime-main.js.map": "/chat-me/static/js/runtime-main.b04c9b8e.js.map",
-    "static/js/2.1b79de86.chunk.js": "/chat-me/static/js/2.1b79de86.chunk.js",
-    "static/js/2.1b79de86.chunk.js.map": "/chat-me/static/js/2.1b79de86.chunk.js.map",
+    "static/js/2.bf24fc56.chunk.js": "/chat-me/static/js/2.bf24fc56.chunk.js",
+    "static/js/2.bf24fc56.chunk.js.map": "/chat-me/static/js/2.bf24fc56.chunk.js.map",
     "index.html": "/chat-me/index.html",
-    "precache-manifest.6ee3f1be42310d5852a2da0598b0a6ed.js": "/chat-me/precache-manifest.6ee3f1be42310d5852a2da0598b0a6ed.js",
+    "precache-manifest.bfd64cbd4dbb2bfa41e5bbbcbcb4cb55.js": "/chat-me/precache-manifest.bfd64cbd4dbb2bfa41e5bbbcbcb4cb55.js",
     "service-worker.js": "/chat-me/service-worker.js",
-    "static/css/main.f366547b.chunk.css.map": "/chat-me/static/css/main.f366547b.chunk.css.map",
-    "static/js/2.1b79de86.chunk.js.LICENSE.txt": "/chat-me/static/js/2.1b79de86.chunk.js.LICENSE.txt",
+    "static/css/main.6e5c8690.chunk.css.map": "/chat-me/static/css/main.6e5c8690.chunk.css.map",
+    "static/js/2.bf24fc56.chunk.js.LICENSE.txt": "/chat-me/static/js/2.bf24fc56.chunk.js.LICENSE.txt",
     "static/media/carles.jpg": "/chat-me/static/media/carles.92b043a0.jpg",
     "static/media/App.css": "/chat-me/static/media/search.231fed55.svg",
     "static/media/done_all.svg": "/chat-me/static/media/done_all.211c1153.svg",
-    "static/media/intro-whatsapp.jpg": "/chat-me/static/media/intro-whatsapp.9466a20e.jpg",
     "static/media/mic.svg": "/chat-me/static/media/mic.958bf042.svg",
     "static/media/send.svg": "/chat-me/static/media/send.282ecb9e.svg",
     "static/media/tag_faces.svg": "/chat-me/static/media/tag_faces.c50cc449.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b04c9b8e.js",
-    "static/js/2.1b79de86.chunk.js",
-    "static/css/main.f366547b.chunk.css",
-    "static/js/main.6c8024f6.chunk.js"
+    "static/js/2.bf24fc56.chunk.js",
+    "static/css/main.6e5c8690.chunk.css",
+    "static/js/main.b0dd51a2.chunk.js"
   ]
 }
